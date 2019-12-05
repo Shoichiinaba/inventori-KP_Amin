@@ -1,0 +1,4 @@
+1. Buat database "kpinventory"
+2. Import kpinventory.sql ke database kpinventory
+
+Have Fun . . .
