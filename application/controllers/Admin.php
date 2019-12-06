@@ -301,6 +301,18 @@ class Admin extends CI_Controller{
     redirect(base_url('admin/tabel_barangmasuk'));
   }
 
+  public function delete_invoice($id_transaksi)
+  {
+    $where = array('id_transaksi' => $id_transaksi);
+    $this->M_admin->delete('tb_barang_keluar',$where);
+    redirect(base_url('admin/tabel_barangkeluar'));
+  }
+  public function delete_master($id_transaksi)
+  {
+    $where = array('id_transaksi' => $id_transaksi);
+    $this->M_admin->delete('tb_barang_masuk',$where);
+    redirect(base_url('C_stock/stock'));
+  }
 
 
   public function proses_databarang_masuk_insert()
